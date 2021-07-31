@@ -30,8 +30,9 @@ public class WorkerResource {
 	@Autowired
 	private WorkerRepository repository;
 	
-	@Value("${test.config}")
-	private String testConfig;
+	//pegar um valor do arquivo de configurações no github
+	//@Value("${test.config}")
+	//private String testConfig;
 	
 	@GetMapping
 	public ResponseEntity<List<Worker>> findAll(){
@@ -59,8 +60,7 @@ public class WorkerResource {
 
 	@GetMapping(value = "/configs")
 	public ResponseEntity<Void> getConfigs(){
-		logger.info("CONFIG = "+ testConfig);
-		
+		//logger.info("CONFIG = "+ testConfig);
 		return ResponseEntity.noContent().build();
 		
 	}
