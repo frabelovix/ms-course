@@ -12,7 +12,7 @@ import com.frabelovix.hroauth.entities.User;
 @FeignClient(name = "hr-user", path = "/users")
 public interface UserFeignClient {
 	
-	@GetMapping(value = "/search")
-	ResponseEntity<User> findByEmail(@RequestParam String email);
+	@GetMapping(value="/search")
+	public ResponseEntity<User> findByEmail(@RequestParam String email);
 
 }
